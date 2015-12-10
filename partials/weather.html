@@ -1,0 +1,16 @@
+<h4>{{ city }}</h4>
+
+<div ng-repeat="w in weatherResult.list">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">{{convertToDate(w.dt) | date: 'MMM d, yyyy'}}</h4>
+				</div>
+				<div class="panel-body">
+					Daytime temperature: {{convertToFarenheit(w.temp.day)}}
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
